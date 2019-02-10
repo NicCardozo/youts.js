@@ -2374,7 +2374,7 @@ if (message.content.startsWith("/warn")){
 }
 
     if (message.content.startsWith(`/dspanel`)){
-        if (message.guild.id != Red-Rock.id) return
+        if (message.guild.id != Red_Rock.id) return
         if (!message.member.hasPermission("MANAGE_ROLES")) return
         if (dspanel.has(message.author.id)){
             dspanel.delete(message.author.id);
