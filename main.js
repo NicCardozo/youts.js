@@ -1,11 +1,6 @@
 const Discord = require('discord.js'); 
 const bot = new Discord.Client();
 const fs = require("fs");
-const Logger = require('./objects/logger');
-
-let requests = JSON.parse(fs.readFileSync("./database/requests.json", "utf8"));
-let blacklist = JSON.parse(fs.readFileSync("./database/blacklist names.json", "utf8"));
-let reqrem = JSON.parse(fs.readFileSync("./database/requests remove.json", "utf8"));
 
 let version = "8.0";
 let hideobnova = true;
