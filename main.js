@@ -1,14 +1,7 @@
 const Discord = require('discord.js'); 
 const bot = new Discord.Client();
 const fs = require("fs");
- /*
-       /dspanel - вход
-       /chat
-       /getwarns - посмотреть варны
-       /warn - выдать варн
-       /embhelp - команды модеров
-       /famhelp 
-        */
+ 
 let version = "8.0";
 let hideobnova = true;
 let levelhigh = 0;
@@ -180,7 +173,7 @@ let manytags = [
 "NW",
 "НВ",
 ];
-let rolesgg = ["Сотрудник RCPD", "Сотрудник LSPD", "Сотрудник LVPD", "⋆ Department of Health ⋆", "⋆ Mass Media ⋆", "⋆ Warlock MC ⋆", "⋆ Russian Mafia ⋆", "⋆ La Cosa Nostra ⋆", "⋆ Yakuza ⋆", "⋆ Grove Street Gang ⋆", "⋆ East Side Ballas Gang ⋆", "⋆ Vagos Gang ⋆", "⋆ Aztecas Gang ⋆", "⋆ Rifa Gang ⋆", "⋆ Night Wolfs ⋆"]
+let rolesgg = ["Полиция", "Полиция", "Военнослужащий", "⋆ Department of Health ⋆", "⋆ Mass Media ⋆", "⋆ Warlock MC ⋆", "⋆ Russian Mafia ⋆", "⋆ La Cosa Nostra ⋆", "⋆ Yakuza ⋆", "⋆ Grove Street Gang ⋆", "⋆ East Side Ballas Gang ⋆", "⋆ Vagos Gang ⋆", "⋆ Aztecas Gang ⋆", "⋆ Rifa Gang ⋆", "⋆ Night Wolfs ⋆"]
 let canremoverole = ["✫Deputy Leader✫", "✵Leader✵", "✮Ministers✮", "✔ Helper ✔"];
 
 const events = {
@@ -1313,7 +1306,7 @@ bot.on('message', async message => {
     }
 
     let dataserver = bot.guilds.find(g => g.id == "543862677328494612");
-    let Red_Rock = bot.guilds.find(g => g.id == "543500237306724393");
+    let scottdale = bot.guilds.find(g => g.id == "543500237306724393");
     if (!dataserver){
         message.channel.send(`\`Data-Server of Red-Rock не был загружен!\nПередайте это сообщение техническим администраторам Discord:\`<@336207279412215809>, <@402092109429080066>`)
         console.error(`Процесс завершен. Data-Server не найден.`)
@@ -2373,7 +2366,7 @@ if (message.content.startsWith("/warn")){
 }
 
     if (message.content.startsWith(`/dspanel`)){
-        if (message.guild.id != Red_Rock.id) return
+        if (message.guild.id != scottdale.id) return
         if (!message.member.hasPermission("MANAGE_ROLES")) return
         if (dspanel.has(message.author.id)){
             dspanel.delete(message.author.id);
@@ -2393,7 +2386,7 @@ if (message.content.startsWith("/warn")){
     }
 
     if (message.content == `/chat`){
-        if (message.guild.id != Red-Rock.id) return
+        if (message.guild.id != scottdale.id) return
         if (!message.member.hasPermission("MANAGE_ROLES")) return
         if (!dspanel.has(message.author.id)) return message.reply(`\`вы не авторизованы в системе модерирования.\``) && message.delete()
         message.reply(`\`для выключения чата используй /chat off, для включения: /chat on\``);
@@ -2401,25 +2394,25 @@ if (message.content.startsWith("/warn")){
     }
 
     if (message.content == `/chat off`){
-        if (message.guild.id != Red-Rock.id) return
+        if (message.guild.id != scottdale.id) return
         if (!message.member.hasPermission("MANAGE_ROLES")) return
         if (!dspanel.has(message.author.id)) return message.reply(`\`вы не авторизованы в системе модерирования.\``) && message.delete()
-        Red-Rock.channels.find(c => c.name == "general").overwritePermissions(Red-Rock.roles.find(r => r.name.includes(`everyone`)), {
+        scottdale.channels.find(c => c.name == "general").overwritePermissions(scottdale.roles.find(r => r.name.includes(`everyone`)), {
             SEND_MESSAGES: false,
         })
-        Red-Rock.channels.find(c => c.name == "spectator-chat").send(`\`Модератор ${message.member.displayName} отключил чат:\` <#${Red-Rock.channels.find(c => c.name == "general").id}>`)
+        scottdale.channels.find(c => c.name == "spectator-chat").send(`\`Модератор ${message.member.displayName} отключил чат:\` <#${scottdale.channels.find(c => c.name == "general").id}>`)
         message.reply(`\`вы успешно отключили чат!\``)
         return messages.delete();
     }
 
     if (message.content == `/chat on`){
-        if (message.guild.id != Red-Rock.id) return
+        if (message.guild.id != scottdale.id) return
         if (!message.member.hasPermission("MANAGE_ROLES")) return
         if (!dspanel.has(message.author.id)) return message.reply(`\`вы не авторизованы в системе модерирования.\``) && message.delete()
-        Red-Rock.channels.find(c => c.name == "general").overwritePermissions(Red-Rock.roles.find(r => r.name.includes(`everyone`)), {
+        scottdale.channels.find(c => c.name == "general").overwritePermissions(scottdale.roles.find(r => r.name.includes(`everyone`)), {
             SEND_MESSAGES: true,
         })
-        Red-Rock.channels.find(c => c.name == "spectator-chat").send(`\`Модератор ${message.member.displayName} включил чат:\` <#${Red-Rock.channels.find(c => c.name == "general").id}>`)
+        scottdale.channels.find(c => c.name == "spectator-chat").send(`\`Модератор ${message.member.displayName} включил чат:\` <#${scottdale.channels.find(c => c.name == "general").id}>`)
         message.reply(`\`вы успешно включили чат!\``)
         return messages.delete();
     }
@@ -3542,7 +3535,6 @@ if (message.content == '/archive'){
                 .addField("Роль для выдачи", `\`Роль для выдачи:\` <@&${role.id}>`)
                 .addField("Отправлено с канала", `<#${message.channel.id}>`)
                 .addField("Информация по выдачи", `\`[✔] - выдать роль\`\n` + `\`[❌] - отказать в выдачи роли\`\n` + `\`[D] - удалить сообщение\``)
-                .setFooter("© Support Team | by Шонушка Фрей")
                 .setTimestamp()
                 reqchat.send(embed).then(async msgsen => {
                     await msgsen.react('✔')
