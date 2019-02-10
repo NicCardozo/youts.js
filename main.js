@@ -37,16 +37,16 @@ tags = ({
 
     "FBI": "⋆ Department of Justice ⋆",
     "ФБР": "⋆ Department of Justice ⋆",
-    "LSPD": "⋆ Department of Justice ⋆",
-    "ЛСПД": "⋆ Department of Justice ⋆",
+    "LSPD": "Сотрудник LSPD",
+    "ЛСПД": "Сотрудник LSPD",
     "SFPD": "⋆ Department of Justice ⋆",
     "СФПД": "⋆ Department of Justice ⋆",
     "LVPD": "⋆ Department of Justice ⋆",
     "ЛВПД": "⋆ Department of Justice ⋆",
     "SWAT": "⋆ Department of Justice ⋆",
     "СВАТ": "⋆ Department of Justice ⋆",
-    "RCPD": "⋆ Department of Justice ⋆",
-    "РКПД": "⋆ Department of Justice ⋆",
+    "RCPD": "Сотрудник RCSD",
+    "РКПД": "Сотрудник RCSD",
 
     "LSA": "⋆ Department of Defence ⋆",
     "ЛСА": "⋆ Department of Defence ⋆",
@@ -250,7 +250,7 @@ const fbi_dostup = new Set();
 fbi_dostup.add("353055790862565377");
 fbi_dostup.add("308604330246799360");
 
-bot.login(NTI0NjcyNTgyNDMyMTk0NTYx.Dz9tNw.w8NHg15oAkq5qTC-GWGxOOr7R5M);
+bot.login(process.env.token);
 bot.on('ready', () => {
     console.log("Бот был успешно запущен!");
     bot.user.setPresence({ game: { name: 'hacker' }, status: 'idle' })
