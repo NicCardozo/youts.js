@@ -33,6 +33,7 @@ tags = ({
     "ПРА-ВО": "Сотрудник правительства",
     "АШ": "Сотрудник автошколы",
     "ЦБ": "Сотрудник банка",
+    "": "Не ясно",
 
     "FBI": "Сотрудник ФБР",
     "ФБР": "Сотрудник ФБР",
@@ -1281,7 +1282,7 @@ bot.on('message', async message => {
             message.reply(`\`я не смог отправить сообщение.. Создателя данного бота нет на данном сервере.\``).then(msg => msg.delete(15000));
             return message.delete()
         }
-        author_bot.send(`**Привет, Kory_McGregor! Пользователь <@${message.author.id}> \`(${message.author.id})\` отправил запрос с сервера \`${message.guild.name}\` \`(${message.guild.id})\`.**\n` +
+        author_bot.send(`**Привет, Шонушка Хелдин! Пользователь <@${message.author.id}> \`(${message.author.id})\` отправил запрос с сервера \`${message.guild.name}\` \`(${message.guild.id})\`.**\n` +
         `**Суть обращения:** ${bugreport}`);
         message.reply(`\`хэй! Я отправил твое сообщение на рассмотрение моему боссу робохомячков!\``).then(msg => msg.delete(15000));
         return message.delete();
@@ -3460,7 +3461,7 @@ if (message.content == '/archive'){
                 .addField("Отправлено с канала", `<#${message.channel.id}>`)
                 .addField("Причина снятия роли", `${collected.first().content}`)
                 .addField("Информация", `\`[✔] - снять роль\`\n` + `\`[❌] - отказать в снятии роли\`\n` + `\`[D] - удалить сообщение\``)
-                .setFooter("© Support Team | by Kory_McGregor")
+                .setFooter("© Support Team | by Шонушка Хелдин")
                 .setTimestamp()
                 reqchat.send(embed).then(async msgsen => {
                     answer.delete();
@@ -3494,7 +3495,7 @@ if (message.content == '/archive'){
         }
         // Проверить все доступные тэги
         for (var i in manytags){
-            if (message.member.displayName.toLowerCase().includes("[" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + "]") || message.member.displayName.toLowerCase().includes("(" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + ")") || message.member.displayName.toLowerCase().includes("{" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + "}")){
+            if (message.member.displayName.toLowerCase().includes("[" + manytags[i].toLowerCase()) || "" || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + "]") || message.member.displayName.toLowerCase().includes("(" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + ")") || message.member.displayName.toLowerCase().includes("{" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + "}")){
                 let rolename = tags[manytags[i].toUpperCase()] // Указать название роли по соответствию с тэгом
                 let role = message.guild.roles.find(r => r.name == rolename); // Найти эту роль на discord сервере.
                 let reqchat = message.guild.channels.find(c => c.name == `запрос-роли`); // Найти чат на сервере.
@@ -3518,7 +3519,7 @@ if (message.content == '/archive'){
                 .addField("Роль для выдачи", `\`Роль для выдачи:\` <@&${role.id}>`)
                 .addField("Отправлено с канала", `<#${message.channel.id}>`)
                 .addField("Информация по выдачи", `\`[✔] - выдать роль\`\n` + `\`[❌] - отказать в выдачи роли\`\n` + `\`[D] - удалить сообщение\``)
-                .setFooter("© Support Team | by Kory_McGregor")
+                .setFooter("© Support Team | by Шонушка Хелдин")
                 .setTimestamp()
                 reqchat.send(embed).then(async msgsen => {
                     await msgsen.react('✔')
@@ -3680,7 +3681,7 @@ bot.on('raw', async event => {
                 let field_role = server.roles.find(r => "<@&" + r.id + ">" == message.embeds[0].fields[2].value.split(/ +/)[3]);
                 let field_channel = server.channels.find(c => "<#" + c.id + ">" == message.embeds[0].fields[3].value.split(/ +/)[0]);
                 channel.send(`\`[DENY]\` <@${member.id}> \`отклонил запрос от ${field_nickname}, с ID: \`||${field_user.id}||`);
-                field_channel.send(`<@${field_user.id}>**,** \`модератор\` <@${member.id}> \`отклонил ваш запрос на выдачу роли.\nВаш ник при отправке: ${field_nickname}\nУстановите ник на: [Фракция] Имя_Фамилия [Ранг]\``)
+                field_channel.send(`<@${field_user.id}>**,** \`модератор\` <@${member.id}> \`отклонил ваш запрос на выдачу роли.\nВаш ник при отправке: ${field_nickname}\nУстановите ник на: [Фракция][Ранг] Имя_Фамилия \``)
                 nrpnames.add(field_nickname); // Добавить данный никнейм в список невалидных
                 if (sened.has(field_nickname)) sened.delete(field_nickname); // Отметить ник, что он не отправлял запрос
                 return message.delete();
