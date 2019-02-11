@@ -135,7 +135,7 @@ let manytags = [
 	
     "WMC",
     "W-MC",
-    "WCM"",
+    "WCM",
     "RM",
     "РМ",
     "LCN",
