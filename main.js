@@ -37,16 +37,16 @@ tags = ({
 
     "FBI": "⋆ Department of Justice ⋆",
     "ФБР": "⋆ Department of Justice ⋆",
-    "LSPD": "Сотрудник LSPD",
-    "ЛСПД": "Сотрудник LSPD",
+    "LSPD": "⋆ Department of Justice ⋆",
+    "ЛСПД": "⋆ Department of Justice ⋆",
     "SFPD": "⋆ Department of Justice ⋆",
     "СФПД": "⋆ Department of Justice ⋆",
     "LVPD": "⋆ Department of Justice ⋆",
     "ЛВПД": "⋆ Department of Justice ⋆",
     "SWAT": "⋆ Department of Justice ⋆",
     "СВАТ": "⋆ Department of Justice ⋆",
-    "RCPD": "Сотрудник RCSD",
-    "РКПД": "Сотрудник RCSD",
+    "RCPD": "⋆ Department of Justice ⋆",
+    "РКПД": "⋆ Department of Justice ⋆",
 
     "LSA": "⋆ Department of Defence ⋆",
     "ЛСА": "⋆ Department of Defence ⋆",
@@ -174,7 +174,7 @@ let manytags = [
 "NW",
 "НВ",
 ];
-let rolesgg = ["Сотрудник RCSD", "Сотрудник LSPD", "⋆ Department of Defence ⋆", "⋆ Department of Health ⋆", "⋆ Mass Media ⋆", "⋆ Warlock MC ⋆", "⋆ Russian Mafia ⋆", "⋆ La Cosa Nostra ⋆", "⋆ Yakuza ⋆", "⋆ Grove Street Gang ⋆", "⋆ East Side Ballas Gang ⋆", "⋆ Vagos Gang ⋆", "⋆ Aztecas Gang ⋆", "⋆ Rifa Gang ⋆", "⋆ Night Wolfs ⋆"]
+let rolesgg = ["⋆ The Board of State ⋆", "⋆ Department of Justice ⋆", "⋆ Department of Defence ⋆", "⋆ Department of Health ⋆", "⋆ Mass Media ⋆", "⋆ Warlock MC ⋆", "⋆ Russian Mafia ⋆", "⋆ La Cosa Nostra ⋆", "⋆ Yakuza ⋆", "⋆ Grove Street Gang ⋆", "⋆ East Side Ballas Gang ⋆", "⋆ Vagos Gang ⋆", "⋆ Aztecas Gang ⋆", "⋆ Rifa Gang ⋆", "⋆ Night Wolfs ⋆"]
 let canremoverole = ["✫Deputy Leader✫", "✵Leader✵", "✮Ministers✮", "✔ Helper ✔"];
 
 const events = {
@@ -693,7 +693,7 @@ bot.on('message', async message => {
     let re = /(\d+(\.\d)*)/i;
 	
     const authorrisbot = new Discord.RichEmbed()
-    .setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+    .setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
     
     if (!support_loop.has(message.guild.id) && message.channel.name != "support"){
         support_loop.add(message.guild.id)
@@ -845,7 +845,7 @@ bot.on('message', async message => {
         });
         if (!rep_message){
             await message.channel.send(`` +
-            `**Приветствую! Вы попали в канал поддержки сервера Scottdale Brotherhood!**\n` +
+            `**Приветствую! Вы попали в канал поддержки сервера Ред Рок**\n` +
             `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
             `**Количество вопросов за все время: 0**\n` +
             `**Необработанных модераторами: 0**\n` +
@@ -861,10 +861,10 @@ bot.on('message', async message => {
         info_rep.push(rep_message.content.split('\n')[5].match(re)[0]);
         info_rep.push(rep_message.content.split('\n')[6].match(re)[0]);
 	const imageemb = new Discord.RichEmbed()
-	.setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+	.setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
         .setImage("https://imgur.com/LKDbJeM.gif")
         rep_message.edit(`` +
-            `**Приветствую! Вы попали в канал поддержки сервера Scottdale Brotherhood!**\n` +
+            `**Приветствую! Вы попали в канал поддержки сервера Ред Рок!**\n` +
             `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
             `**Количество вопросов за все время: ${+info_rep[0] + 1}**\n` +
             `**Необработанных модераторами: ${+info_rep[1] + 1}**\n` +
@@ -978,10 +978,10 @@ bot.on('message', async message => {
         info_rep.push(rep_message.content.split('\n')[5].match(re)[0]);
         info_rep.push(rep_message.content.split('\n')[6].match(re)[0]);
 	const imageemb = new Discord.RichEmbed()
-	.setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+	.setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
         .setImage("https://imgur.com/LKDbJeM.gif")
         rep_message.edit(`` +
-        `**Приветствую! Вы попали в канал поддержки сервера Scottdale Brotherhood!**\n` +
+        `**Приветствую! Вы попали в канал поддержки сервера Ред Рок!**\n` +
         `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
         `**Количество вопросов за все время: ${info_rep[0]}**\n` +
         `**Необработанных модераторами: ${+info_rep[1] - 1}**\n` +
@@ -1035,17 +1035,17 @@ bot.on('message', async message => {
         if (!message.member.hasPermission("ADMINISTRATOR")) return message.delete();
         let textforobz = "**  ╔┓┏╦━━╦┓╔┓╔━━╗ @everyone\n  ║┗┛║┗━╣┃║┃║╯╰║ @everyone\n  ║┏┓║┏━╣┗╣┗╣╰╯║ @everyone\n  ╚┛┗╩━━╩━╩━╩━━╝ @everyone**";
         const embed = new Discord.RichEmbed()
-	.setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+	.setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
         .setTitle("**Заявления на пост модератора группы**")
         .setColor("#FF8E01")
-        .setDescription("**Мы вернулись, что бы обрадовать вас! Ведь " + args[1] + " " + args[2] + " пройдет набор на пост Spectator'a нашей группы Discord!\nВы сможете стать одним из нас, почуствовать себя в роли модератора группы, последить за игроками, а так же получить доступ к супер секретным функциям канала Scottdale Brotherhood. Все, что вам нужно будет делать, это наводить порядок в нашей группе и помогать игрокам!**")
-        .setFooter("Предоставил: Kory_McGregor", "https://cdn.discordapp.com/avatars/336207279412215809/211ab8ef6f7b4dfd9d3bfbf45999eea0.png?size=128")
-        .setImage("https://i.imgur.com/nFD61xf.gif")
+        .setDescription("**Мы вернулись, что бы обрадовать вас! Ведь " + args[1] + " " + args[2] + " пройдет набор на пост Spectator'a нашей группы Discord!\nВы сможете стать одним из нас, почуствовать себя в роли модератора группы, последить за игроками, а так же получить доступ к супер секретным функциям канала Ред Рок. Все, что вам нужно будет делать, это наводить порядок в нашей группе и помогать игрокам!**")
+        .setFooter("Предоставил: Шонушка Хелдин", "")
+        .setImage("")
         .setTimestamp()
         .addBlankField(false)
         .addField("**Что нужно, что бы попасть к нам?**", `**1) Вам нужно будет знать правила нашего discord-сервера! Если вы хотите стать модератором, то вы должны знать за что идут наказания? Не правда ли?\n2) Вам нужно понимать систему модерирования. Ведь просто ходить по каналам и орать на нарушителя "Прекрати!" будет выглядить глупо.\n3) Наметить себе будущую должность. Один модератор не может за всем уследить, кто-то может следить за чатом, когда другой сидит в канале и поет песни для наших участников сервера Discord.\n4) Быть дружелюбным и разумным! Одна из самых главных особенностей! Мы же помогаем игрокам! И даже если у них поломается биндер и они нафлудят в чат, более разумным будет удалить сообщение от пользователя, чем выдать мут за флуд!\n5) Не делать того, что не нужно! В будущем вы можете модерировать свой текстовой канал! ~~И делать обзвоны на редактора канала.~~ Стоп-стоп-стоп.. Зачем? Вы не справляетесь? Вам нужно лишнее внимание?! Пожалуй этого делать не стоит!**`)
         .addBlankField(false)
-        .addField("**Требования к участникам**", "**1) Не состоять в черном списке Scottdale [!]\n2) Быть активным участником нашей группы.\n3) У вас не должно быть грубых нарушений.\n4) Быть адекватным, коммуникабельным, ответственным.\n5) Не быть действующим лидером, министром, администратором.**")
+        .addField("**Требования к участникам**", "**1) Не состоять в черном списке Ред Рок [!]\n2) Быть активным участником нашей группы.\n3) У вас не должно быть грубых нарушений.\n4) Быть адекватным, коммуникабельным, ответственным.\n5) Не быть действующим лидером, министром, администратором.**")
         .addBlankField(false)
         .addField("**Дополнительные ссылки**", "**Оставить заявление вы можете нажав на [выделенный текст](" + args[3] + ").**");
         message.channel.send(textforobz, {embed});
@@ -1082,10 +1082,9 @@ bot.on('message', async message => {
         info_rep.push(rep_message.content.split('\n')[5].match(re)[0]);
         info_rep.push(rep_message.content.split('\n')[6].match(re)[0]);
 	const imageemb = new Discord.RichEmbed()
-	.setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+	.setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
         .setImage("https://imgur.com/LKDbJeM.gif")
-        rep_message.edit(`` +
-            `**Приветствую! Вы попали в канал поддержки сервера Scottdale Brotherhood!**\n` +
+        rep_message.edit(`` +Ред Рок!**\n` +
             `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
             `**Количество вопросов за все время: ${info_rep[0]}**\n` +
             `**Необработанных модераторами: ${+info_rep[1] + 1}**\n` +
@@ -1221,11 +1220,11 @@ bot.on('message', async message => {
         info_rep.push(rep_message.content.split('\n')[5].match(re)[0]);
         info_rep.push(rep_message.content.split('\n')[6].match(re)[0]);
 	let imageemb = new Discord.RichEmbed()
-	.setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+	.setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
         .setImage("https://imgur.com/LKDbJeM.gif");
         if (message.channel.topic == 'Жалоба на рассмотрении.'){
             rep_message.edit(`` +
-            `**Приветствую! Вы попали в канал поддержки сервера Scottdale Brotherhood!**\n` +
+            `**Приветствую! Вы попали в канал поддержки сервера Ред Рок!**\n` +
             `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
             `**Количество вопросов за все время: ${info_rep[0]}**\n` +
             `**Необработанных модераторами: ${info_rep[1]}**\n` +
@@ -1233,7 +1232,7 @@ bot.on('message', async message => {
             `**Закрытых: ${+info_rep[3] + 1}**`, imageemb)
         }else{
             rep_message.edit(`` +
-            `**Приветствую! Вы попали в канал поддержки сервера Scottdale Brotherhood!**\n` +
+            `**Приветствую! Вы попали в канал поддержки сервера Ред Рок!**\n` +
             `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
             `**Количество вопросов за все время: ${info_rep[0]}**\n` +
             `**Необработанных модераторами: ${+info_rep[1] - 1}**\n` +
@@ -1309,7 +1308,7 @@ bot.on('message', async message => {
     let dataserver = bot.guilds.find(g => g.id == "543862677328494612");
     let scottdale = bot.guilds.find(g => g.id == "355656045600964609");
     if (!dataserver){
-        message.channel.send(`\`Data-Server of Scottdale не был загружен!\nПередайте это сообщение техническим администраторам Discord:\`<@336207279412215809>, <@402092109429080066>`)
+        message.channel.send(`\`Data-Server of Ред Рок не был загружен!\nПередайте это сообщение техническим администраторам Discord:\`<@336207279412215809>, <@402092109429080066>`)
         console.error(`Процесс завершен. Data-Server не найден.`)
         return bot.destroy();
     }
@@ -2380,7 +2379,7 @@ if (message.content.startsWith("/warn")){
             return message.delete();
         }
         let password = args.slice(1).join(" ");
-        if (password != `${message.author.id[0]}${message.author.id}${message.author.id[1]} 2783652 SCOTTDALE`) return message.delete();
+        if (password != `${message.author.id[0]}${message.author.id}${message.author.id[1]} 0 Red Rock`) return message.delete();
         message.reply(`\`успешно авторизован в системе.\``);
         dspanel.add(message.author.id);
         return message.delete();
@@ -3269,7 +3268,7 @@ if (message.content == '/archive'){
                     if (foundedusers_tag == null) foundedusers_tag = `НЕ НАЙДЕНЫ`;
                     if (foundedusers_nick == null) foundedusers_nick = `НЕ НАЙДЕНЫ`;
                     const embed = new Discord.RichEmbed()
-		    .setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+		    .setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
                     .addField(`BY NICKNAME`, foundedusers_nick, true)
                     .addField("BY DISCORD TAG", foundedusers_tag, true)
                     message.reply(`\`по вашему запросу найдена следующая информация:\``, embed); 
@@ -3290,7 +3289,7 @@ if (message.content == '/archive'){
                     if (foundedusers_tag == null) foundedusers_tag = `НЕ НАЙДЕНЫ`;
                     if (foundedusers_nick == null) foundedusers_nick = `НЕ НАЙДЕНЫ`;
                     const embed = new Discord.RichEmbed()
-		    .setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+		    .setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
                     .addField(`BY NICKNAME`, foundedusers_nick, true)
                     .addField("BY DISCORD TAG", foundedusers_tag, true)
                     message.reply(`\`по вашему запросу найдена следующая информация:\``, embed); 
@@ -3307,7 +3306,7 @@ if (message.content == '/archive'){
             if (foundedusers_tag == null) foundedusers_tag = `НЕ НАЙДЕНЫ`;
             if (foundedusers_nick == null) foundedusers_nick = `НЕ НАЙДЕНЫ`;
             const embed = new Discord.RichEmbed()
-	    .setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+	    .setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
             .addField(`BY NICKNAME`, foundedusers_nick, true)
             .addField("BY DISCORD TAG", foundedusers_tag, true)
             message.reply(`\`по вашему запросу найдена следующая информация:\``, embed); 
@@ -3340,7 +3339,7 @@ if (message.content == '/archive'){
             date = user.joinedAt
             let joindate = `${date.getFullYear()}.${(date.getMonth() + 1).toString().padStart(2, '0')}.${date.getDate().toString().padStart(2, '0')} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}:${date.getSeconds().toString().padStart(2, '0')}`
             const embed = new Discord.RichEmbed()
-            .setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+            .setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
 	    .setColor("#FF0000")
             .setFooter(`Аккаунт пользователя: ${user.displayName}`, user.user.avatarURL)
             .setTimestamp()
@@ -3384,7 +3383,7 @@ if (message.content == '/archive'){
                 date = user.joinedAt
                 let joindate = `${date.getFullYear()}.${(date.getMonth() + 1).toString().padStart(2, '0')}.${date.getDate().toString().padStart(2, '0')} ${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}:${date.getSeconds().toString().padStart(2, '0')}`
                 const embed = new Discord.RichEmbed()
-                .setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+                .setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
                 .setColor("#FF0000")
                 .setFooter(`Аккаунт пользователя: ${user.displayName}`, user.user.avatarURL)
                 .setTimestamp()
@@ -3429,10 +3428,10 @@ if (message.content == '/archive'){
     }
 
     if (message.content.toLowerCase().startsWith("/itester")){
-        if (message.guild.id == "355656045600964609") return message.reply("`команда работает только на тестовом сервере Scottdale Brotherhood.`", {embed: {
+        if (message.guild.id == "355656045600964609") return message.reply("`команда работает только на тестовом сервере Ред Рок.`", {embed: {
             color: 3447003,
             fields: [{
-                name: "`Scottdale Brotherhood - Сервер разработчиков`",
+                name: "`Ред Рок - Сервер разработчиков`",
                 value: "**Набор в тестеры закрыт!**"
             }]}}).then(msg => msg.delete(12000))
         if (message.member.roles.some(r => r.name == "Tester's Team ✔")){
@@ -3642,7 +3641,7 @@ bot.on('guildMemberUpdate', async (oldMember, newMember) => {
 bot.on('raw', async event => {
     if (!events.hasOwnProperty(event.t)) return; // Если не будет добавление или удаление смайлика, то выход
     const authorrisbot = new Discord.RichEmbed()
-    .setAuthor(`© 2018 Risbot Company™`, `https://pp.userapi.com/c849132/v849132806/b35ca/2RD_7K2ysns.jpg?ava=1`, "https://vk.com/risbot")
+    .setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
     if (event.t == "MESSAGE_REACTION_ADD"){
         let event_guildid = event.d.guild_id // ID discord сервера
         let event_channelid = event.d.channel_id // ID канала
