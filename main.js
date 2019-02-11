@@ -3449,7 +3449,7 @@ if (message.content == '/archive'){
         message.reply(`\`напишите причину снятия роли.\``).then(answer => {
             message.channel.awaitMessages(response => response.member.id == message.member.id, {
                 max: 1,
-                time: 60000,
+                time: 0,
                 errors: ['time'],
             }).then((collected) => {
                 const embed = new Discord.RichEmbed()
