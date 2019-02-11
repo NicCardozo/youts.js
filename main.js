@@ -667,7 +667,7 @@ bot.on('message', async message => {
 bot.on('message', async message => {
     if (message.channel.type == "dm") return // Если в ЛС, то выход.
     if (message.guild.id != serverid && message.guild.id != "543862677328494612") return
-    if (message.type === "PINS_ADD") if (message.channel.name == "requests-for-roles") message.delete();
+    if (message.type === "PINS_ADD") if (message.channel.name == "запрос-роли") message.delete();
     if (message.content == "/ping") return message.reply("`я онлайн!`") && console.log(`Бот ответил ${message.member.displayName}, что я онлайн.`)
     if (message.author.id == bot.user.id) return
     if (message.content.startsWith("-+ban")) lasttestid = message.author.id;
@@ -3437,10 +3437,10 @@ if (message.content == '/archive'){
         let user = message.guild.member(message.mentions.users.first());
         if (!user) return message.react(`📛`)
         if (snyatie.has(message.author.id + `=>` + user.id)) return message.react(`🕖`)
-        let reqchat = message.guild.channels.find(c => c.name == `requests-for-roles`); // Найти чат на сервере.
+        let reqchat = message.guild.channels.find(c => c.name == `запрос-роли`); // Найти чат на сервере.
         if(!reqchat){
-            message.reply(`\`Ошибка выполнения. Канал requests-for-roles не был найден!\``)
-            return console.error(`Канал requests-for-roles не был найден!`)
+            message.reply(`\`Ошибка выполнения. Канал запрос-роли не был найден!\``)
+            return console.error(`Канал запрос-роли не был найден!`)
         }
         let roleremove = user.roles.find(r => rolesgg.includes(r.name));
         if (!roleremove) return message.react(`📛`)
@@ -3497,13 +3497,13 @@ if (message.content == '/archive'){
             if (message.member.displayName.toLowerCase().includes("[" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + "]") || message.member.displayName.toLowerCase().includes("(" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + ")") || message.member.displayName.toLowerCase().includes("{" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + "}")){
                 let rolename = tags[manytags[i].toUpperCase()] // Указать название роли по соответствию с тэгом
                 let role = message.guild.roles.find(r => r.name == rolename); // Найти эту роль на discord сервере.
-                let reqchat = message.guild.channels.find(c => c.name == `requests-for-roles`); // Найти чат на сервере.
+                let reqchat = message.guild.channels.find(c => c.name == `запрос-роли`); // Найти чат на сервере.
                 if (!role){
                     message.reply(`\`Ошибка выполнения. Роль ${rolename} не была найдена.\``)
                     return console.error(`Роль ${rolename} не найдена!`);
                 }else if(!reqchat){
-                    message.reply(`\`Ошибка выполнения. Канал requests-for-roles не был найден!\``)
-                    return console.error(`Канал requests-for-roles не был найден!`)
+                    message.reply(`\`Ошибка выполнения. Канал запрос-роли не был найден!\``)
+                    return console.error(`Канал запрос-роли не был найден!`)
                 }
                 if (message.member.roles.some(r => [rolename].includes(r.name))){
                     return message.react(`👌`) // Если роль есть, поставить окей.
@@ -3639,7 +3639,7 @@ bot.on('raw', async event => {
         let message = await channel.fetchMessage(event_messageid); // Получить сообщение из канала
         let member = server.members.find(m => m.id == event_userid); // Получить пользователя с сервера
 
-        if (channel.name != `requests-for-roles`) return // Если название канала не будет 'requests-for-roles', то выйти
+        if (channel.name != `запрос-роли`) return // Если название канала не будет 'запрос-роли', то выйти
 
         if (event_emoji_name == "🇩"){
             if (!message.embeds[0]){
