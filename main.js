@@ -1084,7 +1084,7 @@ bot.on('message', async message => {
 	const imageemb = new Discord.RichEmbed()
 	.setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
         .setImage("https://imgur.com/LKDbJeM.gif")
-        rep_message.edit(`` +Ред Рок!**\n` +
+        rep_message.edit(``+
             `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
             `**Количество вопросов за все время: ${info_rep[0]}**\n` +
             `**Необработанных модераторами: ${+info_rep[1] + 1}**\n` +
