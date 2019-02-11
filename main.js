@@ -3495,7 +3495,6 @@ if (message.content == '/archive'){
         }
         // Проверить все доступные тэги
         for (var i in manytags){
-            if (message.member.displayName.toLowerCase().includes("[" + manytags[i].toLowerCase()) || "" || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + "]") || message.member.displayName.toLowerCase().includes("(" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + ")") || message.member.displayName.toLowerCase().includes("{" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + "}")){
                 let rolename = tags[manytags[i].toUpperCase()] // Указать название роли по соответствию с тэгом
                 let role = message.guild.roles.find(r => r.name == rolename); // Найти эту роль на discord сервере.
                 let reqchat = message.guild.channels.find(c => c.name == `запрос-роли`); // Найти чат на сервере.
