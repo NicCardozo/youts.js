@@ -3495,15 +3495,16 @@ if (message.content == '/archive'){
         }
         // Проверить все доступные тэги
         for (var i in manytags){
+            if (message.member.displayName.toLowerCase().includes("[" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + "]") || message.member.displayName.toLowerCase().includes("(" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + ")") || message.member.displayName.toLowerCase().includes("{" + manytags[i].toLowerCase()) || message.member.displayName.toLowerCase().includes(manytags[i].toLowerCase() + "}")){
                 let rolename = tags[manytags[i].toUpperCase()] // Указать название роли по соответствию с тэгом
                 let role = message.guild.roles.find(r => r.name == rolename); // Найти эту роль на discord сервере.
-                let reqchat = message.guild.channels.find(c => c.name == `запрос-роли`); // Найти чат на сервере.
+                let reqchat = message.guild.channels.find(c => c.name == `requests-for-roles`); // Найти чат на сервере.
                 if (!role){
                     message.reply(`\`Ошибка выполнения. Роль ${rolename} не была найдена.\``)
                     return console.error(`Роль ${rolename} не найдена!`);
                 }else if(!reqchat){
-                    message.reply(`\`Ошибка выполнения. Канал запрос-роли не был найден!\``)
-                    return console.error(`Канал запрос-роли не был найден!`)
+                    message.reply(`\`Ошибка выполнения. Канал requests-for-roles не был найден!\``)
+                    return console.error(`Канал requests-for-roles не был найден!`)
                 }
                 if (message.member.roles.some(r => [rolename].includes(r.name))){
                     return message.react(`👌`) // Если роль есть, поставить окей.
@@ -3518,7 +3519,7 @@ if (message.content == '/archive'){
                 .addField("Роль для выдачи", `\`Роль для выдачи:\` <@&${role.id}>`)
                 .addField("Отправлено с канала", `<#${message.channel.id}>`)
                 .addField("Информация по выдачи", `\`[✔] - выдать роль\`\n` + `\`[❌] - отказать в выдачи роли\`\n` + `\`[D] - удалить сообщение\``)
-                .setFooter("© Support Team | by Шонушка Хелдин")
+                .setFooter("© Support Team | by Kory_McGregor")
                 .setTimestamp()
                 reqchat.send(embed).then(async msgsen => {
                     await msgsen.react('✔')
