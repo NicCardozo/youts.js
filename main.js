@@ -2644,7 +2644,7 @@ if (message.content.startsWith("/warn")){
                                 })
                             }
                             await message.guild.members.find(m => m.id == family_leader).addRole(family_role);
-                            let general = message.guild.channels.find(c => c.name == `general`);
+                            let general = message.guild.channels.find(c => c.name == `⚡️general⚡️`);
                             if (general) await general.send(`<@${family_leader}>, \`модератор\` <@${idmember}> \`назначил вас контролировать семью: ${family_name}\``)
                             let fam_chat = message.guild.channels.find(c => c.name == `family-chat`);
                             if (fam_chat) await fam_chat.send(`\`[CREATE]\` \`Пользователь\` <@${family_leader}> \`стал лидером семьи '${family_name}'! Назначил:\` <@${idmember}>`);
@@ -2752,7 +2752,7 @@ if (message.content == '/archive'){
                 return message.channel.send(`<@${message.author.id}>, \`пользователь ${user.displayName} отказался от вашего предложения вступить в семью!\``).then(msg => msg.delete(15000));
             }
             if (!user.roles.some(r => r.id == fam_role.id)) user.addRole(fam_role)
-            let general = message.guild.channels.find(c => c.name == `general`);
+            let general = message.guild.channels.find(c => c.name == `⚡️general⚡️`);
             if (general) await general.send(`<@${user.id}>, \`теперь вы являетесь участником семьи '${families[0]}'! Пригласил:\` <@${message.author.id}>`);
             let fam_chat = message.guild.channels.find(c => c.name == `family-chat`);
             if (fam_chat) await fam_chat.send(`\`[INVITE]\` <@${message.author.id}> \`пригласил пользователя\` <@${user.id}> \`в семью: '${families[0]}'\``);
@@ -2804,7 +2804,7 @@ if (message.content == '/archive'){
                 return message.channel.send(`<@${message.author.id}>, \`пользователь ${user.displayName} отказался от вашего предложения вступить в семью!\``).then(msg => msg.delete(15000));
             }
             if (!user.roles.some(r => r.id == fam_role.id)) user.addRole(fam_role)
-            let general = message.guild.channels.find(c => c.name == `general`);
+            let general = message.guild.channels.find(c => c.name == `⚡️general⚡️`);
             if (general) await general.send(`<@${user.id}>, \`теперь вы являетесь участником семьи '${families[args[2]]}'! Пригласил:\` <@${message.author.id}>`);
             let fam_chat = message.guild.channels.find(c => c.name == `family-chat`);
             if (fam_chat) await fam_chat.send(`\`[INVITE]\` <@${message.author.id}> \`пригласил пользователя\` <@${user.id}> \`в семью: '${families[args[2]]}'\``);
@@ -2866,7 +2866,7 @@ if (message.content == '/archive'){
             }
             message.delete();
             if (user.roles.some(r => r.id == fam_role.id)) user.removeRole(fam_role)
-            let general = message.guild.channels.find(c => c.name == `general`);
+            let general = message.guild.channels.find(c => c.name == `⚡️general⚡️`);
             if (general) await general.send(`<@${user.id}>, \`вы были исключены из семьи '${families[0]}'! Источник:\` <@${message.author.id}>`);
             let fam_chat = message.guild.channels.find(c => c.name == `family-chat`);
             if (fam_chat) await fam_chat.send(`\`[KICK]\` <@${message.author.id}> \`выгнал пользователя\` <@${user.id}> \`из семьи: '${families[0]}'\``);
@@ -2911,7 +2911,7 @@ if (message.content == '/archive'){
             }
             message.delete();
             if (user.roles.some(r => r.id == fam_role.id)) user.removeRole(fam_role)
-            let general = message.guild.channels.find(c => c.name == `general`);
+            let general = message.guild.channels.find(c => c.name == `⚡️general⚡️`);
             if (general) await general.send(`<@${user.id}>, \`вы были исключены из семьи '${families[args[2]]}'! Источник:\` <@${message.author.id}>`);
             let fam_chat = message.guild.channels.find(c => c.name == `family-chat`);
             if (fam_chat) await fam_chat.send(`\`[KICK]\` <@${message.author.id}> \`выгнал пользователя\` <@${user.id}> \`из семьи: '${families[args[2]]}'\``);
@@ -2958,7 +2958,7 @@ if (message.content == '/archive'){
         }
         family_channel.delete();
         family_role.delete();
-        let general = message.guild.channels.find(c => c.name == `general`);
+        let general = message.guild.channels.find(c => c.name == `⚡️general⚡️`);
         if (general) await general.send(`<@${family_leader.id}>, \`модератор\` <@${message.author.id}> \`удалил вашу семью: ${name}\``)
         let fam_chat = message.guild.channels.find(c => c.name == `family-chat`);
         if (fam_chat) await fam_chat.send(`\`[DELETED]\` \`Семья '${name}', главой которой был\` <@${family_leader.id}> \`была удалена модератором. Удалил:\` <@${message.author.id}>`);
@@ -3042,7 +3042,7 @@ if (message.content == '/archive'){
                 USE_VAD: true,
                 PRIORITY_SPEAKER: true,
             })
-            let general = message.guild.channels.find(c => c.name == `general`);
+            let general = message.guild.channels.find(c => c.name == `⚡️general⚡️`);
             if (general) await general.send(`<@${user.id}>, \`теперь вы являетесь заместителем семьи '${families[0]}'! Назначил:\` <@${message.author.id}>`);
             let fam_chat = message.guild.channels.find(c => c.name == `family-chat`);
             if (fam_chat) await fam_chat.send(`\`[RANK]\` <@${message.author.id}> \`назначил заместителя\` <@${user.id}> \`семья: '${families[0]}'\``);
@@ -3104,7 +3104,7 @@ if (message.content == '/archive'){
                 USE_VAD: true,
                 PRIORITY_SPEAKER: true,
             })
-            let general = message.guild.channels.find(c => c.name == `general`);
+            let general = message.guild.channels.find(c => c.name == `⚡️general⚡️`);
             if (general) await general.send(`<@${user.id}>, \`теперь вы являетесь заместителем семьи '${families[args[2]]}'! Назначил:\` <@${message.author.id}>`);
             let fam_chat = message.guild.channels.find(c => c.name == `family-chat`);
             if (fam_chat) await fam_chat.send(`\`[RANK]\` <@${message.author.id}> \`назначил заместителем\` <@${user.id}> \`семья: '${families[args[2]]}'\``);
@@ -3173,7 +3173,7 @@ if (message.content == '/archive'){
                 return message.delete();
             }
             message.delete();
-            let general = message.guild.channels.find(c => c.name == `general`);
+            let general = message.guild.channels.find(c => c.name == `⚡️general⚡️`);
             if (general) await general.send(`<@${user.id}>, \`вы были изгнаны с поста заместителя семьи '${families[0]}'! Снял:\` <@${message.author.id}>`);
             let fam_chat = message.guild.channels.find(c => c.name == `family-chat`);
             if (fam_chat) await fam_chat.send(`\`[RANK]\` <@${message.author.id}> \`снял заместителя\` <@${user.id}> \`семья: '${families[0]}'\``);
@@ -3220,7 +3220,7 @@ if (message.content == '/archive'){
                 return message.delete();
             }
             message.delete();
-            let general = message.guild.channels.find(c => c.name == `general`);
+            let general = message.guild.channels.find(c => c.name == `⚡️general⚡️`);
             if (general) await general.send(`<@${user.id}>, \`вы были изгнаны с поста заместителя семьи '${families[args[2]]}'! Снял:\` <@${message.author.id}>`);
             let fam_chat = message.guild.channels.find(c => c.name == `family-chat`);
             if (fam_chat) await fam_chat.send(`\`[RANK]\` <@${message.author.id}> \`снял заместителя\` <@${user.id}> \`семья: '${families[args[2]]}'\``);
@@ -3782,8 +3782,8 @@ bot.on('guildBanAdd', async (guild, user) => {
         .addField(`**Информация о блокировке**`, `**Заблокирован: ${user}**\n**Заблокировал: ${member}**\n**Причина: \`${reason}\`**`)
         // .addField(`**Причина блокировки**`, `**\`${reason}\`**`)
         .setFooter(`Команда по безопасности Discord сервера.`, guild.iconURL)
-        guild.channels.find(c => c.name == "general").send(embed_ban).catch(() => {
-            guild.channels.find(c => c.name == "general").send(`**${user} был заблокирован.**`)
+        guild.channels.find(c => c.name == "⚡️general⚡️").send(embed_ban).catch(() => {
+            guild.channels.find(c => c.name == "⚡️general⚡️").send(`**${user} был заблокирован.**`)
         })
     }, 2000);
 })
