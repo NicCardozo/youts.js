@@ -22,7 +22,7 @@ let setembed_general = ["не указано", "не указано", "не ук
 let setembed_fields = ["нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет"];
 let setembed_addline = ["нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет"];
 
-let serverid = '543500237306724393'
+let serverid = '507261769182609429'
 
 punishment_rep = ({
     "mute": "Вы были замучены в текстовых каналах.",
@@ -236,7 +236,7 @@ fbi_dostup.add("308604330246799360");
 bot.login(process.env.token);
 bot.on('ready', () => {
     console.log("Бот был успешно запущен!");
-    bot.user.setPresence({ game: { name: 'hacker' }, status: 'idle' })
+    bot.user.setPresence({ game: { name: 'MGW' }, status: 'online' })
 });
 
 // Система удаленного управления ботом для отключения,фиксов багов и т.д.
@@ -828,7 +828,7 @@ bot.on('message', async message => {
         });
         if (!rep_message){
             await message.channel.send(`` +
-            `**Приветствую! Вы попали в канал поддержки сервера Ред Рок**\n` +
+            `**Приветствую! Вы попали в канал поддержки сервера Monser Gang War**\n` +
             `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
             `**Количество вопросов за все время: 0**\n` +
             `**Необработанных модераторами: 0**\n` +
@@ -847,7 +847,7 @@ bot.on('message', async message => {
 	.setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
         .setImage("https://imgur.com/LKDbJeM.gif")
         rep_message.edit(`` +
-            `**Приветствую! Вы попали в канал поддержки сервера Ред Рок!**\n` +
+            `**Приветствую! Вы попали в канал поддержки сервера Monser Gang War!**\n` +
             `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
             `**Количество вопросов за все время: ${+info_rep[0] + 1}**\n` +
             `**Необработанных модераторами: ${+info_rep[1] + 1}**\n` +
@@ -964,7 +964,7 @@ bot.on('message', async message => {
 	.setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
         .setImage("https://imgur.com/LKDbJeM.gif")
         rep_message.edit(`` +
-        `**Приветствую! Вы попали в канал поддержки сервера Ред Рок!**\n` +
+        `**Приветствую! Вы попали в канал поддержки сервера Monser Gang War!**\n` +
         `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
         `**Количество вопросов за все время: ${info_rep[0]}**\n` +
         `**Необработанных модераторами: ${+info_rep[1] - 1}**\n` +
@@ -1021,14 +1021,14 @@ bot.on('message', async message => {
 	.setAuthor(`© 2019 Xelene Company™`, ``, "https://vk.com/risbot")
         .setTitle("**Заявления на пост модератора группы**")
         .setColor("#FF8E01")
-        .setDescription("**Мы вернулись, что бы обрадовать вас! Ведь " + args[1] + " " + args[2] + " пройдет набор на пост Spectator'a нашей группы Discord!\nВы сможете стать одним из нас, почуствовать себя в роли модератора группы, последить за игроками, а так же получить доступ к супер секретным функциям канала Ред Рок. Все, что вам нужно будет делать, это наводить порядок в нашей группе и помогать игрокам!**")
+        .setDescription("**Мы вернулись, что бы обрадовать вас! Ведь " + args[1] + " " + args[2] + " пройдет набор на пост Spectator'a нашей группы Discord!\nВы сможете стать одним из нас, почуствовать себя в роли модератора группы, последить за игроками, а так же получить доступ к супер секретным функциям канала Monser Gang War. Все, что вам нужно будет делать, это наводить порядок в нашей группе и помогать игрокам!**")
         .setFooter("Предоставил: Шонушка Хелдин", "")
         .setImage("")
         .setTimestamp()
         .addBlankField(false)
         .addField("**Что нужно, что бы попасть к нам?**", `**1) Вам нужно будет знать правила нашего discord-сервера! Если вы хотите стать модератором, то вы должны знать за что идут наказания? Не правда ли?\n2) Вам нужно понимать систему модерирования. Ведь просто ходить по каналам и орать на нарушителя "Прекрати!" будет выглядить глупо.\n3) Наметить себе будущую должность. Один модератор не может за всем уследить, кто-то может следить за чатом, когда другой сидит в канале и поет песни для наших участников сервера Discord.\n4) Быть дружелюбным и разумным! Одна из самых главных особенностей! Мы же помогаем игрокам! И даже если у них поломается биндер и они нафлудят в чат, более разумным будет удалить сообщение от пользователя, чем выдать мут за флуд!\n5) Не делать того, что не нужно! В будущем вы можете модерировать свой текстовой канал! ~~И делать обзвоны на редактора канала.~~ Стоп-стоп-стоп.. Зачем? Вы не справляетесь? Вам нужно лишнее внимание?! Пожалуй этого делать не стоит!**`)
         .addBlankField(false)
-        .addField("**Требования к участникам**", "**1) Не состоять в черном списке Ред Рок [!]\n2) Быть активным участником нашей группы.\n3) У вас не должно быть грубых нарушений.\n4) Быть адекватным, коммуникабельным, ответственным.\n5) Не быть действующим лидером, министром, администратором.**")
+        .addField("**Требования к участникам**", "**1) Не состоять в черном списке Monser Gang War [!]\n2) Быть активным участником нашей группы.\n3) У вас не должно быть грубых нарушений.\n4) Быть адекватным, коммуникабельным, ответственным.\n5) Не быть действующим лидером, министром, администратором.**")
         .addBlankField(false)
         .addField("**Дополнительные ссылки**", "**Оставить заявление вы можете нажав на [выделенный текст](" + args[3] + ").**");
         message.channel.send(textforobz, {embed});
@@ -1207,7 +1207,7 @@ bot.on('message', async message => {
         .setImage("https://imgur.com/LKDbJeM.gif");
         if (message.channel.topic == 'Жалоба на рассмотрении.'){
             rep_message.edit(`` +
-            `**Приветствую! Вы попали в канал поддержки сервера Ред Рок!**\n` +
+            `**Приветствую! Вы попали в канал поддержки сервера Monser Gang War!**\n` +
             `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
             `**Количество вопросов за все время: ${info_rep[0]}**\n` +
             `**Необработанных модераторами: ${info_rep[1]}**\n` +
@@ -1215,7 +1215,7 @@ bot.on('message', async message => {
             `**Закрытых: ${+info_rep[3] + 1}**`, imageemb)
         }else{
             rep_message.edit(`` +
-            `**Приветствую! Вы попали в канал поддержки сервера Ред Рок!**\n` +
+            `**Приветствую! Вы попали в канал поддержки сервера Monser Gang War!**\n` +
             `**Тут Вы сможете задать вопрос модераторам или администраторам сервера!**\n\n` +
             `**Количество вопросов за все время: ${info_rep[0]}**\n` +
             `**Необработанных модераторами: ${+info_rep[1] - 1}**\n` +
@@ -1291,7 +1291,7 @@ bot.on('message', async message => {
     let dataserver = bot.guilds.find(g => g.id == "543862677328494612");
     let scottdale = bot.guilds.find(g => g.id == "355656045600964609");
     if (!dataserver){
-        message.channel.send(`\`Data-Server of Ред Рок не был загружен!\nПередайте это сообщение техническим администраторам Discord:\`<@336207279412215809>, <@402092109429080066>`)
+        message.channel.send(`\`Data-Server of Monser Gang War не был загружен!\nПередайте это сообщение техническому администратору Discord:\`<@449307837399695365>`)
         console.error(`Процесс завершен. Data-Server не найден.`)
         return bot.destroy();
     }
@@ -1623,62 +1623,7 @@ bot.on('message', async message => {
         })
     }
 
-    if (message.content == "/embsend"){
-        let level_mod = 0;
-        let db_server = bot.guilds.find(g => g.id == "543862677328494612");
-        let db_parent = db_server.channels.find(c => c.name == 'db_users');
-        let acc_creator = db_server.channels.find(c => c.name == message.author.id);
-        if (acc_creator){
-            await acc_creator.fetchMessages({limit: 1}).then(async messages => {
-                if (messages.size == 1){
-                    messages.forEach(async sacc => {
-			let str = sacc.content;
-                        level_mod = +str.split('\n')[0].match(re)[0];
-                    });
-                }
-            });
-        }
-        if (!message.member.hasPermission("ADMINISTRATOR") && +level_mod < 1) return
-        const embed = new Discord.RichEmbed();
-        if (setembed_general[0] != "не указано") embed.setTitle(setembed_general[0]);
-        if (setembed_general[1] != "не указано") embed.setDescription(setembed_general[1]);
-        if (setembed_general[2] != "не указано") embed.setColor(setembed_general[2]);
-        let i = 0;
-        while (setembed_fields[i] != 'нет'){
-            embed.addField(setembed_fields[i].split(`<=+=>`)[0], setembed_fields[i].split(`<=+=>`)[1]);
-            if (setembed_addline[i] != 'нет') embed.addBlankField(false);
-            i++;
-        }
-        if (setembed_general[4] != "не указано") embed.setImage(setembed_general[4]);
-        if (setembed_general[5] != "не указано" && setembed_general[6] == "не указано") embed.setFooter(setembed_general[5]);
-        if (setembed_general[6] != "не указано" && setembed_general[5] != "не указано") embed.setFooter(setembed_general[5], setembed_general[6]);
-        if (setembed_general[3] != "не указано") embed.setTimestamp();
-        message.channel.send(embed).catch(err => message.channel.send(`\`Хм.. Не получается. Возможно вы сделали что-то не так.\``));
-        return message.delete();
-    }
-
-if (message.content.startsWith("/del") && !message.content.includes("fam")){
-  if (!fbi_dostup.has(message.author.id) && !message.member.hasPermission("ADMINISTRATOR")){
-    message.reply(`\`недостаточно прав доступа.\``, authorrisbot).then(msg => msg.delete(10000));
-    return message.delete();
-  }
-  let user = message.guild.member(message.mentions.users.first());
-  if (!user){
-    message.reply(`\`укажите пользователя! '/del @упоминание'\``).then(msg => msg.delete(15000));
-    return message.delete();
-  }
-  let fbi_category = message.guild.channels.find(c => c.name == "FBI ALL CHANNELS");
-  await fbi_category.permissionOverwrites.forEach(async perm => {
-    if (perm.type == `member`){
-      if (perm.id == user.id){
-        perm.delete();
-      }
-    }
-  });
-  message.reply(`\`вы успешно забрали доступ у пользователя\` <@${user.id}> \`к каналу FBI.\``);
-  return message.delete();
-}
-    
+  
 if (message.content.startsWith("/mwarn")){
   if (!message.member.hasPermission("ADMINISTRATOR")) return
   let user = message.guild.member(message.mentions.users.first());
@@ -2238,249 +2183,6 @@ if (message.content.startsWith("/getwarns")){
     });
   }
 }
-
-if (message.content.startsWith("/warn")){
-  if (!message.member.hasPermission("MANAGE_ROLES")) return
-  if (warn_cooldown.has(message.author.id)) return message.delete();
-  warn_cooldown.add(message.author.id)
-  setTimeout(() => {
-    if (warn_cooldown.has(message.author.id)) warn_cooldown.delete(message.author.id);
-  }, 30000);
-  let user = message.guild.member(message.mentions.users.first());
-  const args = message.content.slice(`/warn`).split(/ +/);
-  if (!user || !args[2]){
-    message.reply(`\`ошибка выполнения! '/warn [пользователь] [причина]'\``).then(msg => msg.delete(9000));
-    return message.delete();
-  }
-  let reason = args.slice(2).join(" ");
-  if (reason.length < 3 || reason.length > 70){
-    message.reply(`\`ошибка выполнения! Причина должна быть больше 3-х и меньше 70-и символов.\``).then(msg => msg.delete(9000));
-    return message.delete();
-  }
-  if (user.hasPermission("ADMINISTRATOR") || user.roles.some(r => ["Spectator™", "Support Team", "✔ Helper ✔", "✔Jr.Administrator✔", "✔ Administrator ✔"].includes(r.name))){
-    if (!message.member.hasPermission("ADMINISTRATOR")){
-      message.reply(`\`ошибка выполнения! Данному пользователю нельзя выдать предупреждение!\``).then(msg => msg.delete(9000));
-      return message.delete();
-    }
-  }
-  if (reason.includes("==>")){
-    message.reply(`\`ошибка выполнения! Вы использовали запрещенный символ!\``).then(msg => msg.delete(9000));
-    return message.delete();
-  }
-  let db_server = bot.guilds.find(g => g.id == "543862677328494612");
-  let db_parent = db_server.channels.find(c => c.name == 'db_users');
-  let acc = db_server.channels.find(c => c.name == user.id);
-  if (!acc){
-    await db_server.createChannel(user.id).then(async chan => {
-      await chan.setTopic(`<@${user.id}> - ${user.displayName}`);
-      acc = chan;
-    });
-  }
-  await acc.fetchMessages({limit: 1}).then(async messages => {
-    if (messages.size == 1){
-      messages.forEach(async sacc => {
-        let str = sacc.content;
-        let moderation_level = str.split('\n')[0].match(re)[0];
-        let moderation_warns = str.split('\n')[1].match(re)[0];
-        let user_warns = str.split('\n')[+moderation_warns + 2].match(re)[0];
-        let moderation_reason = [];
-        let user_reason = [];
-        let moderation_time = [];
-        let user_time = [];
-        let moderation_give = [];
-        let user_give = [];
-        
-        let circle = 0;
-        while (+moderation_warns > circle){
-          moderation_reason.push(str.split('\n')[+circle + 2].split('==>')[0]);
-          moderation_time.push(str.split('\n')[+circle + 2].split('==>')[1]);
-          moderation_give.push(str.split('\n')[+circle + 2].split('==>')[2]);
-          circle++;
-        }
-
-        circle = 0;
-        while (+user_warns > circle){
-          user_reason.push(str.split('\n')[+circle + +moderation_warns + 3].split('==>')[0]);
-          user_time.push(str.split('\n')[+circle + +moderation_warns + 3].split('==>')[1]);
-          user_give.push(str.split('\n')[+circle + +moderation_warns + 3].split('==>')[2]);
-          circle++;
-        }
-        
-        user_warns++
-        user_reason.push(reason);
-        user_time.push(259200000 * +user_warns + 259200000 + +message.createdAt.valueOf());
-        user_give.push(message.member.displayName);
-        
-        let text_end = `Уровень модератора: ${moderation_level}\n` + 
-        `Предупреждения модератора: ${moderation_warns}`;
-        for (var i = 0; i < moderation_reason.length; i++){
-          text_end = text_end + `\n${moderation_reason[i]}==>${moderation_time[i]}==>${moderation_give[i]}`;
-        }
-        text_end = text_end + `\nПредупреждений: ${+user_warns}`;
-        for (var i = 0; i < user_reason.length; i++){
-          text_end = text_end + `\n${user_reason[i]}==>${user_time[i]}==>${user_give[i]}`;
-        }
-        if (+user_warns < 3){
-          sacc.edit(text_end);
-          let ann = message.guild.channels.find(c => c.name == "general");
-          ann.send(`<@${user.id}>, \`модератор\` <@${message.author.id}> \`выдал вам предупреждение (${user_warns}/3). Причина: ${reason}\nЕсли вы не согласны с модератором, вы можете написать в нашу поддержку\` <#${message.guild.channels.find(c => c.name == "support").id}>`);
-          return message.delete();
-        }else{
-          await fs.appendFileSync(`./ban.txt`, `${text_end}`);
-	  await message.guild.channels.find(c => c.name == "spectator-chat").send(`\`Привет! Я тут чела за нарушение правил забанил!\``, { files: [ `./ban.txt` ] });
-          fs.unlinkSync(`./ban.txt`);
-          acc.delete();
-          let ann = message.guild.channels.find(c => c.name == "general");
-          await ann.send(`<@${user.id}>, \`модератор\` <@${message.author.id}> \`выдал вам предупреждение (${user_warns}/3). Причина: ${reason}\nВам была выдана блокировка за нарушение правил (3/3)!\``);
-          user.ban("Максимальное количество предупреждений");
-          return message.delete();
-        }
-      });
-    }else{
-      await acc.send(`Уровень модератора: 0\n` +
-      `Предупреждения модератора: 0\n` +
-      `Предупреждений: 1\n` +
-      `${reason}==>${+message.createdAt.valueOf() + 259200000}==>${message.member.displayName}`);
-      let ann = message.guild.channels.find(c => c.name == "general");
-      ann.send(`<@${user.id}>, \`модератор\` <@${message.author.id}> \`выдал вам предупреждение. Причина: ${reason}\nЕсли вы не согласны с модератором, вы можете написать в нашу поддержку\` <#${message.guild.channels.find(c => c.name == "support").id}>`);
-      return message.delete();
-    }
-  });
-}
-
-    if (message.content.startsWith(`/dspanel`)){
-        if (message.guild.id != scottdale.id) return
-        if (!message.member.hasPermission("MANAGE_ROLES")) return
-        if (dspanel.has(message.author.id)){
-            dspanel.delete(message.author.id);
-            message.reply(`\`успешно вышел из системы.\``);
-            return message.delete();
-        }
-        const args = message.content.slice('/dspanel').split(/ +/)
-        if (!args[1]){
-            message.reply(`\`введите пароль.\``).then(msg => msg.delete(7000));
-            return message.delete();
-        }
-        let password = args.slice(1).join(" ");
-        if (password != `${message.author.id[0]}${message.author.id}${message.author.id[1]} 0 Red Rock`) return message.delete();
-        message.reply(`\`успешно авторизован в системе.\``);
-        dspanel.add(message.author.id);
-        return message.delete();
-    }
-
-    if (message.content == `/chat`){
-        if (message.guild.id != scottdale.id) return
-        if (!message.member.hasPermission("MANAGE_ROLES")) return
-        if (!dspanel.has(message.author.id)) return message.reply(`\`вы не авторизованы в системе модерирования.\``) && message.delete()
-        message.reply(`\`для выключения чата используй /chat off, для включения: /chat on\``);
-        return message.delete();
-    }
-
-    if (message.content == `/chat off`){
-        if (message.guild.id != scottdale.id) return
-        if (!message.member.hasPermission("MANAGE_ROLES")) return
-        if (!dspanel.has(message.author.id)) return message.reply(`\`вы не авторизованы в системе модерирования.\``) && message.delete()
-        scottdale.channels.find(c => c.name == "general").overwritePermissions(scottdale.roles.find(r => r.name.includes(`everyone`)), {
-            SEND_MESSAGES: false,
-        })
-        scottdale.channels.find(c => c.name == "spectator-chat").send(`\`Модератор ${message.member.displayName} отключил чат:\` <#${scottdale.channels.find(c => c.name == "general").id}>`)
-        message.reply(`\`вы успешно отключили чат!\``)
-        return messages.delete();
-    }
-
-    if (message.content == `/chat on`){
-        if (message.guild.id != scottdale.id) return
-        if (!message.member.hasPermission("MANAGE_ROLES")) return
-        if (!dspanel.has(message.author.id)) return message.reply(`\`вы не авторизованы в системе модерирования.\``) && message.delete()
-        scottdale.channels.find(c => c.name == "general").overwritePermissions(scottdale.roles.find(r => r.name.includes(`everyone`)), {
-            SEND_MESSAGES: true,
-        })
-        scottdale.channels.find(c => c.name == "spectator-chat").send(`\`Модератор ${message.member.displayName} включил чат:\` <#${scottdale.channels.find(c => c.name == "general").id}>`)
-        message.reply(`\`вы успешно включили чат!\``)
-        return messages.delete();
-    }
-    
-        if (message.content.toLowerCase() == '/famhelp'){
-        message.channel.send(`**<@${message.author.id}>, вот справка по системе семей!**`, {embed: {
-            color: 3447003,
-            fields: [{
-                name: `Создание, удаление, информация`,
-                value: `**Создать семью:** \`/createfam\`\n**Удалить семью:** \`/deletefam [название]\`\n**Информация о семье:** \`/faminfo [название]\``,
-            },
-            {
-                name: `Управление семьей`,
-                value: `**Назначить заместителя:** \`/famaddzam [user]\`\n**Снять заместителя:** \`/famdelzam [user]\``,
-            },
-            {
-                name: `Команды для заместителей`,
-                value: `**Пригласить участника:** \`/faminvite [user]\`\n**Исключить участника:** \`/famkick [user]\``,
-            }]
-        }}).then(msg => msg.delete(35000))
-        return message.delete();
-    }
-
-    if (message.content.startsWith('/faminfo')){
-        const args = message.content.slice('/faminfo').split(/ +/)
-        if (!args[1]){
-            message.reply(`\`использование: /faminfo [название семьи]\``).then(msg => msg.delete(7000));
-            return message.delete();
-        }
-        let familyname = args.slice(1).join(" ");
-        let family_channel = null;
-        let family_role = null;
-        let family_leader;
-        let families_zams = [];
-        await message.guild.channels.filter(async channel => {
-            if (channel.name == familyname){
-                if (channel.type == "voice"){
-                    if (channel.parent.name.toString() == `Family ROOMS`){
-                        family_channel = channel;
-                        await channel.permissionOverwrites.forEach(async perm => {
-                            if (perm.type == `role`){
-                                let role_fam = message.guild.roles.find(r => r.id == perm.id);
-                                if (role_fam.name == channel.name){
-                                    family_role = role_fam;
-                                }
-                            }
-                            if (perm.type == `member`){
-                                if (perm.allowed.toArray().some(r => r == `CREATE_INSTANT_INVITE`)){
-                                    family_leader = message.guild.members.find(m => m.id == perm.id);
-                                }
-                            }
-                            if (perm.type == `member`){
-                                if (!perm.allowed.toArray().some(r => r == `CREATE_INSTANT_INVITE`) && perm.allowed.toArray().some(r => r == `PRIORITY_SPEAKER`)){
-                                    families_zams.push(perm.id)
-                                }
-                            }
-                        })
-                    }
-                }
-            }else if(channel.name.includes(familyname)){
-                if (channel.type == "voice"){
-                    if (channel.parent.name.toString() == `Family ROOMS`){
-                        family_channel = channel;
-                        await channel.permissionOverwrites.forEach(async perm => {
-                            if (perm.type == `role`){
-                                let role_fam = message.guild.roles.find(r => r.id == perm.id);
-                                if (role_fam.name == channel.name){
-                                    family_role = role_fam;
-                                }
-                            }
-                            if (perm.type == `member`){
-                                if (perm.allowed.toArray().some(r => r == `CREATE_INSTANT_INVITE`)){
-                                    family_leader = message.guild.members.find(m => m.id == perm.id);
-                                }
-                            }
-                            if (perm.type == `member`){
-                                if (!perm.allowed.toArray().some(r => r == `CREATE_INSTANT_INVITE`) && perm.allowed.toArray().some(r => r == `PRIORITY_SPEAKER`)){
-                                    families_zams.push(perm.id)
-                                }
-                            }
-                        })
-                    }
-                }
-            }
-        });
         if (family_channel == null || family_role == null){
             message.channel.send(`\`[ERROR]\` <@${message.author.id}> \`ошибка! Семья: '${familyname}' не найдена!\``).then(msg => msg.delete(10000));
             return message.delete();
@@ -3394,36 +3096,6 @@ if (message.content == '/archive'){
     }
     */
 	
-    if (message.content.startsWith("/dwarn")){
-	if (!message.member.hasPermission("ADMINISTRATOR")){
-	    message.reply(`\`недостаточно прав доступа!\``).then(msg => msg.delete(12000));
-	    return message.delete();
-	}
-	let user = message.guild.member(message.mentions.users.first());
-        if (!user){
-            message.reply(`\`пользователь не указан! '/dwarn [user]'\``)
-            return message.delete();
-        }
-	antislivsp1.delete(user.id);
-	antislivsp2.delete(user.id);
-	let spchangg = message.guild.channels.find(c => c.name == "spectator-chat");
-	spchangg.send(`\`${message.member.displayName} очистил все предупреждения системой антислива пользователю\` <@${user.id}>`);
-    }
-
-    if (message.content.toLowerCase().startsWith("/itester")){
-        if (message.guild.id == "355656045600964609") return message.reply("`команда работает только на тестовом сервере Ред Рок.`", {embed: {
-            color: 3447003,
-            fields: [{
-                name: "`Ред Рок - Сервер разработчиков`",
-                value: "**Набор в тестеры закрыт!**"
-            }]}}).then(msg => msg.delete(12000))
-        if (message.member.roles.some(r => r.name == "Tester's Team ✔")){
-            return message.reply("`вы уже являетесь тестером.`")
-        }
-        message.member.addRole(bot.guilds.find(g => g.id == message.guild.id).roles.find(r => r.name == "Tester's Team ✔"));
-        return message.reply(`\`теперь вы тестер.\``)
-    }
-    
     if (message.content.toLowerCase().includes("сними") || message.content.toLowerCase().includes("снять")){
         if (!message.member.roles.some(r => canremoverole.includes(r.name)) && !message.member.hasPermission("MANAGE_ROLES")) return
         const args = message.content.split(/ +/)
