@@ -301,9 +301,7 @@ bot.on('ready', () => {
             if(message.member.roles.some(r=>rolesgg.includes(r.name)) ) {
                 for (var i in rolesgg){
                     let rolerem = bot.guilds.find(g => g.id == message.guild.id).roles.find(r => r.name == rolesgg[i]);
-                    if (message.member.roles.some(role=>[rolesgg[i]].includes(role.name))){
-                        await message.member.removeRole(rolerem); // Забрать роли указанные ранее.
-                    }
+                    if (message.member.roles.some(role=>[rolesgg[i]].includes(role.name)))
                 }
             }
             message.react(`📛`) // Поставить знак стоп под отправленным сообщением.
