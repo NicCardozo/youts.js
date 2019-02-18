@@ -1,4 +1,4 @@
-const Discord = require('discord.js'); 
+const Discord = require('discord.js'); // by Artemka076#6715
 const bot = new Discord.Client();
 const fs = require("fs");
 
@@ -22,7 +22,7 @@ let setembed_general = ["не указано", "не указано", "не ук
 let setembed_fields = ["нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет"];
 let setembed_addline = ["нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет", "нет"];
 
-let serverid = '355656045600964609'
+let serverid = '547049003775164417'
 
 punishment_rep = ({
     "mute": "Вы были замучены в текстовых каналах.",
@@ -551,7 +551,7 @@ bot.on('message', async message => {
             }
             if (!args[2]) return message.delete();
             if (!args[3]) return message.delete();
-            if (args[2] != "493459379878625320" && args[2] != "521639035442036736"){
+            if (args[2] != "543862677328494612" && args[2] != "521639035442036736"){
                 message.channel.send(`\`[ERROR]\` ${message.member} \`сервер '${args[2]}' не назначен как БД.\``);
                 return message.delete();
             }
@@ -592,7 +592,7 @@ bot.on('message', async message => {
             if (!args[3]) return message.delete();
             if (!args[4]) return message.delete();
             if (!args[5]) return message.delete();
-            if (args[2] != "493459379878625320" && args[2] != "521639035442036736"){
+            if (args[2] != "543862677328494612" && args[2] != "521639035442036736"){
                 message.channel.send(`\`[ERROR]\` ${message.member} \`сервер '${args[2]}' не назначен как БД.\``);
                 return message.delete();
             }
@@ -644,7 +644,7 @@ bot.on('message', async message => {
             if (!args[2]) return message.delete();
             if (!args[3]) return message.delete();
             if (!args[4]) return message.delete();
-            if (args[2] != "493459379878625320" && args[2] != "521639035442036736"){
+            if (args[2] != "543862677328494612" && args[2] != "521639035442036736"){
                 message.channel.send(`\`[ERROR]\` ${message.member} \`сервер '${args[2]}' не назначен как БД.\``);
                 return message.delete();
             }
@@ -684,7 +684,7 @@ bot.on('message', async message => {
 
 bot.on('message', async message => {
     if (message.channel.type == "dm") return // Если в ЛС, то выход.
-    if (message.guild.id != serverid && message.guild.id != "493459379878625320") return
+    if (message.guild.id != serverid && message.guild.id != "543862677328494612") return
     if (message.type === "PINS_ADD") if (message.channel.name == "requests-for-roles") message.delete();
     if (message.content == "/ping") return message.reply("`я онлайн!`") && console.log(`Бот ответил ${message.member.displayName}, что я онлайн.`)
     if (message.author.id == bot.user.id) return
@@ -757,7 +757,7 @@ bot.on('message', async message => {
             }
         });
         // UNWARN SYSTEM
-        let dataserver = bot.guilds.find(g => g.id == "493459379878625320");
+        let dataserver = bot.guilds.find(g => g.id == "543862677328494612");
         dataserver.channels.forEach(async channel => {
             if (channel.type=="text"){
                 if (channel.name != 'administration' && channel.name != 'accounts' && channel.name != 'bad-words' && channel.name != 'err-code' && channel.name != 'config'){
@@ -832,7 +832,7 @@ bot.on('message', async message => {
         }, 300000);
         let id_mm;
         let rep_message;
-        let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+        let db_server = bot.guilds.find(g => g.id == "543862677328494612");
         let db_channel = db_server.channels.find(c => c.name == "config");
         await db_channel.fetchMessages().then(async messages => {
             let db_msg = messages.find(m => m.content.startsWith(`MESSAGEID:`));
@@ -959,7 +959,7 @@ bot.on('message', async message => {
             }
         });
         let rep_message;
-        let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+        let db_server = bot.guilds.find(g => g.id == "543862677328494612");
         let db_channel = db_server.channels.find(c => c.name == "config");
         await db_channel.fetchMessages().then(async messages => {
             let db_msg = messages.find(m => m.content.startsWith(`MESSAGEID:`));
@@ -1063,7 +1063,7 @@ bot.on('message', async message => {
             }
         });
         let rep_message;
-        let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+        let db_server = bot.guilds.find(g => g.id == "543862677328494612");
         let db_channel = db_server.channels.find(c => c.name == "config");
         await db_channel.fetchMessages().then(async messages => {
             let db_msg = messages.find(m => m.content.startsWith(`MESSAGEID:`));
@@ -1202,7 +1202,7 @@ bot.on('message', async message => {
             }
         });
         let rep_message;
-        let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+        let db_server = bot.guilds.find(g => g.id == "543862677328494612");
         let db_channel = db_server.channels.find(c => c.name == "config");
         await db_channel.fetchMessages().then(async messages => {
             let db_msg = messages.find(m => m.content.startsWith(`MESSAGEID:`));
@@ -1306,8 +1306,8 @@ bot.on('message', async message => {
         return message.delete();
     }
 
-    let dataserver = bot.guilds.find(g => g.id == "493459379878625320");
-    let scottdale = bot.guilds.find(g => g.id == "355656045600964609");
+    let dataserver = bot.guilds.find(g => g.id == "543862677328494612");
+    let scottdale = bot.guilds.find(g => g.id == "547049003775164417");
     if (!dataserver){
         message.channel.send(`\`Data-Server of Scottdale не был загружен!\nПередайте это сообщение техническим администраторам Discord:\`<@336207279412215809>, <@402092109429080066>`)
         console.error(`Процесс завершен. Data-Server не найден.`)
@@ -1316,7 +1316,7 @@ bot.on('message', async message => {
 	
     if (message.content.startsWith("/setup")){
         let level_mod = 0;
-        let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+        let db_server = bot.guilds.find(g => g.id == "543862677328494612");
         let db_parent = db_server.channels.find(c => c.name == 'db_users');
         let acc_creator = db_server.channels.find(c => c.name == message.author.id);
         if (acc_creator){
@@ -1431,7 +1431,7 @@ bot.on('message', async message => {
 	
     if (message.content == '/embhelp'){
         let level_mod = 0;
-        let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+        let db_server = bot.guilds.find(g => g.id == "543862677328494612");
         let db_parent = db_server.channels.find(c => c.name == 'db_users');
         let acc_creator = db_server.channels.find(c => c.name == message.author.id);
         if (acc_creator){
@@ -1492,7 +1492,7 @@ bot.on('message', async message => {
 
     if (message.content.startsWith("/embsetup")){
         let level_mod = 0;
-        let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+        let db_server = bot.guilds.find(g => g.id == "543862677328494612");
         let db_parent = db_server.channels.find(c => c.name == 'db_users');
         let acc_creator = db_server.channels.find(c => c.name == message.author.id);
         if (acc_creator){
@@ -1561,7 +1561,7 @@ bot.on('message', async message => {
 
     if (message.content.startsWith("/embfield")){
         let level_mod = 0;
-        let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+        let db_server = bot.guilds.find(g => g.id == "543862677328494612");
         let db_parent = db_server.channels.find(c => c.name == 'db_users');
         let acc_creator = db_server.channels.find(c => c.name == message.author.id);
         if (acc_creator){
@@ -1643,7 +1643,7 @@ bot.on('message', async message => {
 
     if (message.content == "/embsend"){
         let level_mod = 0;
-        let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+        let db_server = bot.guilds.find(g => g.id == "543862677328494612");
         let db_parent = db_server.channels.find(c => c.name == 'db_users');
         let acc_creator = db_server.channels.find(c => c.name == message.author.id);
         if (acc_creator){
@@ -1718,7 +1718,7 @@ if (message.content.startsWith("/mwarn")){
     message.reply(`\`ошибка выполнения! Вы использовали запрещенный символ!\``).then(msg => msg.delete(9000));
     return message.delete();
   }
-  let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+  let db_server = bot.guilds.find(g => g.id == "543862677328494612");
   let db_parent = db_server.channels.find(c => c.name == 'db_users');
   let acc = db_server.channels.find(c => c.name == user.id);
   if (!acc){
@@ -1887,7 +1887,7 @@ if (message.content.startsWith("/unwarn")){
       message.reply(`\`модератору нельзя снимать предупреждения!\``).then(msg => msg.delete(9000));
       return message.delete();
     }
-    let dataserver = bot.guilds.find(g => g.id == "493459379878625320");
+    let dataserver = bot.guilds.find(g => g.id == "543862677328494612");
     let report_channel = dataserver.channels.find(c => c.name == user.id);
     if (!report_channel){
       message.reply(`\`у пользователя нет предупреждений!\``).then(msg => msg.delete(9000));
@@ -1958,7 +1958,7 @@ if (message.content.startsWith("/unwarn")){
       message.reply(`\`недостаточно прав доступа к данному разделу!\``).then(msg => msg.delete(9000));
       return message.delete();
     }
-    let dataserver = bot.guilds.find(g => g.id == "493459379878625320");
+    let dataserver = bot.guilds.find(g => g.id == "543862677328494612");
     let report_channel = dataserver.channels.find(c => c.name == user.id);
     if (!report_channel){
       message.reply(`\`у пользователя нет предупреждений!\``).then(msg => msg.delete(9000));
@@ -2032,7 +2032,7 @@ if (message.content.startsWith("/getmwarns")){
     return message.delete();
   }
   if (user.id == message.author.id){
-    let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+    let db_server = bot.guilds.find(g => g.id == "543862677328494612");
     let acc = db_server.channels.find(c => c.name == user.id);
     if (!acc){
       message.reply(`\`у вас нет текущих предупреждений.\``).then(msg => msg.delete(12000));
@@ -2084,7 +2084,7 @@ if (message.content.startsWith("/getmwarns")){
       message.reply(`\`у вас нет прав модератора для просмотра чужой статистики.\``, authorrisbot).then(msg => msg.delete(7000));
       return message.delete();
     }
-    let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+    let db_server = bot.guilds.find(g => g.id == "543862677328494612");
     let acc = db_server.channels.find(c => c.name == user.id);
     if (!acc){
       message.reply(`\`у пользователя нет предупреждений.\``).then(msg => msg.delete(12000));
@@ -2141,7 +2141,7 @@ if (message.content.startsWith("/getwarns")){
     return message.delete();
   }
   if (user.id == message.author.id){
-    let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+    let db_server = bot.guilds.find(g => g.id == "543862677328494612");
     let acc = db_server.channels.find(c => c.name == user.id);
     if (!acc){
       message.reply(`\`у вас нет текущих предупреждений.\``).then(msg => msg.delete(12000));
@@ -2200,7 +2200,7 @@ if (message.content.startsWith("/getwarns")){
       message.reply(`\`у вас нет прав модератора для просмотра чужой статистики.\``, authorrisbot).then(msg => msg.delete(7000));
       return message.delete();
     }
-    let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+    let db_server = bot.guilds.find(g => g.id == "543862677328494612");
     let acc = db_server.channels.find(c => c.name == user.id);
     if (!acc){
       message.reply(`\`у пользователя нет предупреждений.\``).then(msg => msg.delete(12000));
@@ -2285,7 +2285,7 @@ if (message.content.startsWith("/warn")){
     message.reply(`\`ошибка выполнения! Вы использовали запрещенный символ!\``).then(msg => msg.delete(9000));
     return message.delete();
   }
-  let db_server = bot.guilds.find(g => g.id == "493459379878625320");
+  let db_server = bot.guilds.find(g => g.id == "543862677328494612");
   let db_parent = db_server.channels.find(c => c.name == 'db_users');
   let acc = db_server.channels.find(c => c.name == user.id);
   if (!acc){
@@ -3429,7 +3429,7 @@ if (message.content == '/archive'){
     }
 
     if (message.content.toLowerCase().startsWith("/itester")){
-        if (message.guild.id == "355656045600964609") return message.reply("`команда работает только на тестовом сервере .`", {embed: {
+        if (message.guild.id == "547049003775164417") return message.reply("`команда работает только на тестовом сервере .`", {embed: {
             color: 3447003,
             fields: [{
                 name: "` - Сервер разработчиков`",
@@ -3553,7 +3553,7 @@ if (message.content == '/archive'){
 });
 
 bot.on('guildMemberUpdate', async (oldMember, newMember) => {
-    if (newMember.guild.id != "355656045600964609") return // Сервер не 03!
+    if (newMember.guild.id != "547049003775164417") return // Сервер не 03!
     if (oldMember.roles.size == newMember.roles.size) return // Сменил ник или еще чет!
     if (newMember.user.bot) return // Бот не принимается!
     if (oldMember.roles.size < newMember.roles.size){
