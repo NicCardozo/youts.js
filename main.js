@@ -51,7 +51,7 @@ tags = ({
     "LSA": "⋆ Department of Defence ⋆",
     "ЛСА": "⋆ Department of Defence ⋆",
     "SFA": "⋆ Department of Defence ⋆",
-    "СФА": "⋆ Department of Defence ⋆",
+    "СФА": "⋆ Department of Defence ⋆", // помогите
     "LS-A": "⋆ Department of Defence ⋆",
     "ЛС-А": "⋆ Department of Defence ⋆",
     "SF-A": "⋆ Department of Defence ⋆",
